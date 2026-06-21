@@ -1,19 +1,25 @@
 $(document).ready(function () {
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    var thisEntry = $(this).parent().parent();
+    $(".abstract.hidden.open").not(thisEntry.find(".abstract.hidden")).removeClass("open");
+    $(".bibtex.hidden.open").removeClass("open");
+    $(".award.hidden.open").removeClass("open");
+    thisEntry.find(".abstract.hidden").toggleClass("open");
   });
   $("a.award").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    var thisEntry = $(this).parent().parent();
+    $(".award.hidden.open").not(thisEntry.find(".award.hidden")).removeClass("open");
+    $(".bibtex.hidden.open").removeClass("open");
+    $(".abstract.hidden.open").removeClass("open");
+    thisEntry.find(".award.hidden").toggleClass("open");
   });
   $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
+    var thisEntry = $(this).parent().parent();
+    $(".bibtex.hidden.open").not(thisEntry.find(".bibtex.hidden")).removeClass("open");
+    $(".abstract.hidden.open").removeClass("open");
+    $(".award.hidden.open").removeClass("open");
+    thisEntry.find(".bibtex.hidden").toggleClass("open");
   });
   $("a").removeClass("waves-effect waves-light");
 

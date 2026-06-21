@@ -19,6 +19,7 @@ services:
       - .:/srv/jekyll
     entrypoint: /bin/bash
     command: >
-      -c "bundle install --quiet && exec /tmp/entry_point.sh"
+      -c "bundle install --quiet &&
+      bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"
     environment:
       - JEKYLL_ENV=development

@@ -802,9 +802,10 @@ footer.sticky-bottom {
   h2.bibliography {
     color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
+    padding-top: 0.75rem;
+    margin-top: 1.5rem;
     text-align: right;
+    font-size: 1.4rem;
   }
 
   ol.bibliography {
