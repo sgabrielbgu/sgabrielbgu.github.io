@@ -193,39 +193,105 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
-// Profile
+html {
+  scrollbar-gutter: stable;
+}
 
-.profile {
+// Clickable research topic headers (accordion)
+.research-topic {
+  cursor: pointer;
+  text-align: left !important;
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+
+  .topic-toggle-icon {
+    font-size: 0.7em;
+    display: inline-block;
+    width: 1em;
+  }
+}
+
+// Expanded student publications — indent to align with student name
+.student-pubs {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 576px) {
+    margin-left: calc(100% * 2 / 12);
+    border-left: 2px solid var(--global-theme-color);
+    padding-left: 0.75rem;
+  }
+
+  h2.bibliography {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .col.col-sm-2.abbr {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .col-sm-8 {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+
+// Profile sidebar (photo + contact info, persistent across all pages)
+
+.profile-sidebar {
   width: 100%;
+  max-width: 420px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  overflow-x: hidden;
+
+  .profile-sidebar-photo {
+    flex: 0 0 auto;
+    width: 35%;
+    max-width: 160px;
+  }
 
   .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 260px;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
 
     p {
-      display: inline-block;
-      margin: 0;
+      margin: 0 0 0.3rem 0;
+      max-width: 100%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
     }
   }
 }
 
-.profile.float-right {
-  margin-left: 1rem;
-}
+@media (min-width: 768px) {
+  .profile-sidebar {
+    max-width: none;
+    position: sticky;
+    top: 105px;
+    align-self: flex-start;
 
-.profile.float-left {
-  margin-right: 1rem;
-}
+    .profile-sidebar-photo {
+      width: 100%;
+      max-width: none;
+    }
 
-@media (min-width: 576px) {
-  .profile {
-    width: 30%;
-
-    .address {
-      p {
-        display: block;
-      }
+    .more-info {
+      max-width: 100%;
     }
   }
 }
@@ -734,7 +800,7 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
@@ -759,6 +825,7 @@ footer.sticky-bottom {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
+          width: auto !important;
           color: var(--global-card-bg-color) !important;
 
           a {

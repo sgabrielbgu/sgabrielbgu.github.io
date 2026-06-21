@@ -17,5 +17,8 @@ services:
       - 35729:35729
     volumes:
       - .:/srv/jekyll
+    entrypoint: /bin/bash
+    command: >
+      -c "bundle install --quiet && exec /tmp/entry_point.sh"
     environment:
       - JEKYLL_ENV=development

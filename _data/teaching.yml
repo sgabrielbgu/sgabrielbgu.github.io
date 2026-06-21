@@ -1,0 +1,34 @@
+- title: Introduction to Computer Science
+  level: Undergraduate
+  year: "1st year"
+  description: Programming fundamentals in Python, including recursion, object-oriented programming, basic data structures, and practical applications.
+
+- title: Digital Systems Design
+  level: Undergraduate
+  year: "1st year"
+  description: Combinational and sequential logic design, Boolean algebra, and an introduction to digital circuits and finite state machines.
+
+- title: Graph Theory
+  level: Undergraduate
+  year: "2nd year"
+  description: Fundamental concepts and algorithms in graph theory — trees, connectivity, matching, network flows, and graph coloring.
+
+- title: Optimization Theory
+  level: Undergraduate
+  year: "4th year"
+  description: Linear and convex optimization, duality theory, and algorithms for constrained and unconstrained optimization problems.
+
+- title: Virtualization and Cloud Computing
+  level: Undergraduate
+  year: "4th year"
+  description: Principles of virtualization, cloud computing architectures, and resource management in virtualized and cloud environments.
+
+- title: Quality-of-Service
+  level: Graduate
+  year: "M.Sc./Ph.D."
+  description: Performance guarantees and resource management mechanisms in networks, including scheduling, buffer management, and admission control.
+
+- title: Game Theory in Communication Networks
+  level: Graduate
+  year: "M.Sc./Ph.D."
+  description: Game-theoretic models and solution concepts (Nash equilibrium, mechanism design) applied to resource allocation and routing in communication networks.

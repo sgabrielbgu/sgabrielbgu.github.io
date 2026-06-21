@@ -1,0 +1,43 @@
+{% assign service = site.data.service %}
+
+<div class="publications">
+
+<h2 class="bibliography">Editorial & Organization</h2>
+<ol class="bibliography">
+  {% for r in service.roles %}
+  <li>
+    <div class="row">
+      <div class="col col-sm-2 abbr">
+        <abbr class="badge rounded w-100">{{ r.title | truncate: 12, "" }}</abbr>
+      </div>
+      <div class="col-sm-8">
+        <div class="title">{{ r.title }}</div>
+        <div class="periodical">
+          <em>{% if r.url %}<a href="{{ r.url }}">{{ r.venue }}</a>{% else %}{{ r.venue }}{% endif %}</em>{% if r.note %} ({{ r.note }}){% endif %}
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 class="bibliography">TPC Memberships</h2>
+{% for entry in service.tpc %}
+<h2 class="bibliography">{{ entry.year }}</h2>
+<ol class="bibliography">
+  {% for conf in entry.conferences %}
+  <li>
+    <div class="row">
+      <div class="col col-sm-2 abbr">
+        <abbr class="badge rounded w-100">TPC</abbr>
+      </div>
+      <div class="col-sm-8">
+        <div class="title">{% if conf.url %}<a href="{{ conf.url }}">{{ conf.name }}</a>{% else %}{{ conf.name }}{% endif %}</div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endfor %}
+
+</div>

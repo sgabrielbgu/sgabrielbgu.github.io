@@ -1,0 +1,84 @@
+{% assign students = site.data.students %}
+{% assign current_phd = students | where: "status", "current" | where: "degree", "Ph.D." %}
+{% assign current_msc = students | where: "status", "current" | where: "degree", "M.Sc." %}
+{% assign current = current_phd | concat: current_msc %}
+{% assign graduated = students | where: "status", "graduated" | sort: "year" | reverse %}
+
+<div class="publications" id="students-accordion">
+
+{% if current.size > 0 %}
+<h2 class="bibliography">Current</h2>
+<ol class="bibliography">
+  {% for s in current %}
+  {% assign sid = s.name | slugify | append: "-" | append: s.degree | slugify %}
+  <li>
+    <div class="row">
+      <div class="col col-sm-2 abbr">
+        <abbr class="badge rounded w-100">{{ s.degree }}</abbr>
+      </div>
+      <div id="student-{{ sid }}" class="col-sm-8">
+        <div class="title">{{ s.name }}</div>
+        <div class="author">
+          {% if s.note %}{{ s.note }}{% endif %}
+          {% if s.cosupervisor %}
+            {% if s.note %} · {% endif %}Joint supervision with {{ s.cosupervisor }}
+          {% endif %}
+        </div>
+        {% if s.publications %}
+        <div class="links">
+          <a class="btn btn-sm z-depth-0" data-toggle="collapse" href="#pubs-{{ sid }}" role="button" aria-expanded="false">Publications ({{ s.publications.size }})</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if s.publications %}
+    <div class="collapse student-pubs" id="pubs-{{ sid }}" data-parent="#students-accordion">
+      {% bibliography_keys {{ s.publications | join: " " }} %}
+    </div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+{% if graduated.size > 0 %}
+  {% assign years = graduated | map: "year" | uniq %}
+  {% for y in years %}
+  <h2 class="bibliography">{{ y }}</h2>
+  <ol class="bibliography">
+    {% assign year_phd = graduated | where: "year", y | where: "degree", "Ph.D." %}
+    {% assign year_msc = graduated | where: "year", y | where: "degree", "M.Sc." %}
+    {% assign year_students = year_phd | concat: year_msc %}
+    {% for s in year_students %}
+    {% assign sid = s.name | slugify | append: "-" | append: s.degree | slugify %}
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded w-100">{{ s.degree }}</abbr>
+        </div>
+        <div id="student-{{ sid }}" class="col-sm-8">
+          <div class="title">{{ s.name }}</div>
+          <div class="author">
+            {% if s.cosupervisor %}Joint supervision with {{ s.cosupervisor }}{% endif %}
+            {% if s.cosupervisor and s.position %} · {% endif %}
+            {% if s.position %}Now at {{ s.position | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}
+          </div>
+          {% if s.publications %}
+          <div class="links">
+            <a class="btn btn-sm z-depth-0" data-toggle="collapse" href="#pubs-{{ sid }}" role="button" aria-expanded="false">Publications ({{ s.publications.size }})</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if s.publications %}
+      <div class="collapse student-pubs" id="pubs-{{ sid }}" data-parent="#students-accordion">
+        {% bibliography_keys {{ s.publications | join: " " }} %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endfor %}
+{% endif %}
+
+</div>

@@ -1,0 +1,47 @@
+{% assign courses = site.data.teaching %}
+{% assign undergrad = courses | where: "level", "Undergraduate" %}
+{% assign graduate = courses | where: "level", "Graduate" %}
+
+<div class="publications">
+
+{% if undergrad.size > 0 %}
+<h2 class="bibliography">Undergraduate</h2>
+<ol class="bibliography">
+  {% for c in undergrad %}
+  <li>
+    <div class="row">
+      <div class="col col-sm-2 abbr">
+        <abbr class="badge rounded w-100">{{ c.year | default: "" }}</abbr>
+      </div>
+      <div class="col-sm-8">
+        <div class="title">{{ c.title }}</div>
+        <div class="periodical"><em>{{ c.description }}</em></div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+{% if graduate.size > 0 %}
+<h2 class="bibliography">Graduate</h2>
+<ol class="bibliography">
+  {% for c in graduate %}
+  <li>
+    <div class="row">
+      {% if c.year %}
+      <div class="col col-sm-2 abbr">
+        <abbr class="badge rounded w-100">{{ c.year }}</abbr>
+      </div>
+      {% endif %}
+      <div class="{% if c.year %}col-sm-8{% else %}col-sm-8 offset-sm-2{% endif %}">
+        <div class="title">{{ c.title }}</div>
+        <div class="periodical"><em>{{ c.description }}</em></div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+</div>

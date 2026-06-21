@@ -1,0 +1,126 @@
+- name: Raz Segal
+  degree: M.Sc.
+  status: graduated
+  year: 2021
+  cosupervisor: Chen Avin
+  publications:
+    - segal2024soar
+    - segal2022constrained
+    - segal2021soar
+
+- name: Saar Ben-Yohana
+  degree: Ph.D.
+  status: current
+  cosupervisor: Chen Avin
+
+- name: Saar Ben-Yohana
+  degree: M.Sc.
+  status: graduated
+  year: 2026
+  cosupervisor: Chen Avin
+  publications:
+    - benyohana2025tttp
+
+- name: Yarin Oziel
+  degree: M.Sc.
+  status: current
+  cosupervisor: Yossi Oren
+  publications:
+    - oziel26uops
+
+- name: Shir Cohen
+  degree: M.Sc.
+  status: current
+
+- name: Shahar Blank
+  degree: M.Sc.
+  status: graduated
+  year: 2025
+  cosupervisor: Gil Einziger
+
+- name: Elioz Geller
+  degree: M.Sc.
+  status: graduated
+  year: 2024
+  cosupervisor: Chen Avin
+
+- name: Nadav Keren
+  degree: Ph.D.
+  status: current
+  cosupervisor: Gil Einziger
+  publications:
+    - keren2026latency
+
+- name: Nadav Keren
+  degree: M.Sc.
+  status: graduated
+  year: 2024
+  cosupervisor: Gil Einziger
+  publications:
+    - keren2023latency
+
+- name: Itamar Cohen
+  degree: Ph.D.
+  status: graduated
+  year: 2019
+  position: "[Ariel University](https://www.ariel.ac.il/wp/itamarc/)"
+  publications:
+    - cohen2023dynamic
+    - cohen2023highthroughput
+    - cohen2022falsenegative
+    - cohen2021access
+    - cohen2021parallel
+    - cohen2021power
+    - cohen2021selfadjusting
+    - cohen2019access
+    - cohen2018queueing
+    - cohen2017queueing
+
+- name: Itamar Gozlan
+  degree: M.Sc.
+  status: graduated
+  year: 2023
+  cosupervisor: Gil Einziger
+  publications:
+    - gozlan2023goto
+
+- name: Tom Kessous
+  degree: M.Sc.
+  status: graduated
+  year: 2023
+  cosupervisor: Niv Gilboa
+
+- name: Uriah Elkayam
+  degree: M.Sc.
+  status: graduated
+  year: 2023
+  cosupervisor: Niv Gilboa
+
+- name: Michael Markovitch
+  degree: M.Sc.
+  status: graduated
+  year: 2014
+  position: "[Brown University](http://cs.brown.edu/people/mmarkovi/)"
+  publications:
+    - markovitch2022bounded
+    - markovitch2014bounded
+
+- name: Yakov Sandomirsky
+  degree: M.Sc.
+  status: graduated
+  year: 2014
+  cosupervisor: Omer Gurewitz
+  publications:
+    - gurewitz2014cellular
+
+- name: Ben Amos
+  degree: M.Sc.
+  status: graduated
+  year: 2019
+  cosupervisor: Niv Gilboa
+
+- name: Arbel Levy
+  degree: M.Sc.
+  status: graduated
+  year: 2019
+  cosupervisor: Niv Gilboa

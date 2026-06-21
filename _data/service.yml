@@ -1,0 +1,133 @@
+roles:
+  - title: Area Editor
+    venue: Computer Communications
+    url: https://www.journals.elsevier.com/computer-communications
+    note: "2019--2024"
+
+  - title: Co-chair
+    venue: DCC 2019
+    url: http://www.disc-conference.org/wp/dcc2019/
+    note: along with Chen Avin
+
+  - title: Local Arrangements Chair
+    venue: MedAlg 2012
+    url: https://sites.google.com/site/medalgs2012/home
+
+  - title: Co-organizer
+    venue: Israel Networking Day 2014
+    url: https://ind.net.technion.ac.il/
+
+
+tpc:
+  - year: 2026
+    conferences:
+      - name: RE-NET
+        url: https://conferences.sigcomm.org/co-next/2026/#!/renet
+
+  - year: 2024
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2024.ieee-infocom.org/
+
+  - year: 2023
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2023.ieee-infocom.org/
+
+  - year: 2022
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2022.ieee-infocom.org/
+
+  - year: 2021
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2021.ieee-infocom.org/
+
+  - year: 2020
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2020.ieee-infocom.org/
+      - name: ICCCN
+        url: http://www.icccn.org/icccn20/
+
+  - year: 2019
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2019.ieee-infocom.org/
+
+  - year: 2018
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2018.ieee-infocom.org/
+      - name: RAWNET
+        url: http://iwin.sjtu.edu.cn/wiopt2018/rawnet.html
+
+  - year: 2017
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2017.ieee-infocom.org/
+
+  - year: 2016
+    conferences:
+      - name: INFOCOM
+        url: http://infocom2016.ieee-infocom.org/
+
+  - year: 2015
+    conferences:
+      - name: INFOCOM
+        url: https://infocom2015.ieee-infocom.org/
+
+  - year: 2014
+    conferences:
+      - name: INFOCOM
+        url: http://www.ieee-infocom.org/2014/
+      - name: WiOPT
+        url: http://www.wi-opt.org/
+
+  - year: 2013
+    conferences:
+      - name: INFOCOM
+        url: http://infocom.di.unimi.it/
+      - name: WiOPT
+        url: http://www.wi-opt.org/
+
+  - year: 2012
+    conferences:
+      - name: INFOCOM
+        url: http://www.ieee-infocom.org/2012/
+      - name: WiOPT
+        url: http://wi-opt.cs.upb.de/WiOpt_2012/
+      - name: IWQoS
+        url: http://www.ieee-iwqos.org/2012/
+
+  - year: 2011
+    conferences:
+      - name: INFOCOM
+        url: http://www.ieee-infocom.org/2011/
+      - name: WiOPT
+        url: http://scenic.princeton.edu/wiopt/
+      - name: IWQoS
+        url: http://www.ieee-iwqos.org/2011/
+      - name: IFIP Performance
+        url: http://event.cwi.nl/performance2011/index.html
+
+  - year: 2010
+    conferences:
+      - name: INFOCOM
+        url: http://www.ieee-infocom.org/2010/
+      - name: ALGOSENSORS
+        url: http://www14.in.tum.de/personen/scheideler/algosensors/
+      - name: WiOPT
+        url: http://lia.univ-avignon.fr/wiopt2010
+      - name: ICCCN
+        url: http://icccn.org/icccn10/
+
+  - year: 2009
+    conferences:
+      - name: WCNC
+        url: http://www.ieee-wcnc.org/2009/
+      - name: FOWANC
+        url: http://nrl.uncc.edu/FOWANC/2009/
+      - name: ICCCN
+        url: http://icccn.org/icccn09/

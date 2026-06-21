@@ -1,28 +1,14 @@
 ---
-layout: profiles
+layout: page
 permalink: /people/
-title: people
-description: members of the lab or group
+title: students
+description:
 nav: true
-nav_order: 7
-
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+nav_order: 3
 ---
+
+#### A note for prospective graduate students and postdocs
+
+If you are interested in pursuing graduate studies (M.Sc./Ph.D. program) in either theoretical or systems aspects of computer networks, cloud computing, or HW security, feel free to [drop me a line](/) and schedule a meeting where we could discuss things further. It is recommended you check out my recent [publications](/publications/) beforehand to see if any of my current research topics are of specific interest.
+
+{% include students.liquid %}
